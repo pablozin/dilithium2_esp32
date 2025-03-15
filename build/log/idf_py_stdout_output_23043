@@ -1,0 +1,29 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd "/home/pablo/Área de trabalho/TESTES ESP32/testedilithium/build/bootloader/esp-idf/esptool_py" && /home/pablo/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/pablo/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/pablo/Área\ de\ trabalho/TESTES\ ESP32/testedilithium/build/bootloader/bootloader.bin
+Bootloader binary size 0x68b0 bytes. 0x750 bytes (7%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/testedilithium.c.obj
+/home/pablo/Área de trabalho/TESTES ESP32/testedilithium/main/testedilithium.c: In function 'app_main':
+/home/pablo/Área de trabalho/TESTES ESP32/testedilithium/main/testedilithium.c:120:21: warning: passing argument 1 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
+  120 |                     test_dilithium_performance_task, /* Function that implements the task. */
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                     |
+      |                     void (* (*)(void *))(void *)
+In file included from /home/pablo/esp/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from /home/pablo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/pablo/Área de trabalho/TESTES ESP32/testedilithium/main/testedilithium.c:3:
+/home/pablo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:382:67: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (* (*)(void *))(void *)'
+  382 |         extern BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                                                    ~~~~~~~~~~~~~~~^~~~~~~~~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable testedilithium.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/pablo/Área de trabalho/TESTES ESP32/testedilithium/build/testedilithium.bin
+[9/9] cd "/home/pablo/Área de trabalho/TESTES ESP32/testedilithium/build/esp-idf/esptool_py" && /home/pablo/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/pablo/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/pablo/Área\ de\ trabalho/TESTES\ ESP32/testedilithium/build/partition_table/partition-table.bin /home/pablo/Área\ de\ trabalho/TESTES\ ESP32/testedilithium/build/testedilithium.bin
+testedilithium.bin binary size 0x31350 bytes. Smallest app partition is 0x100000 bytes. 0xcecb0 bytes (81%) free.
