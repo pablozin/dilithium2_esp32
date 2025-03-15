@@ -19,6 +19,7 @@ This repository contains an implementation of the **Dilithium-2** post-quantum c
     - `CRYPTO_BYTES = 2420`
 ---
 - **Perfomance**:
+
 | Operation      | Average Cycles | Time @ 160 MHz |
 |----------------|----------------|----------------|
 | Key Generation | 3,847,692      | 24.05 ms       |
