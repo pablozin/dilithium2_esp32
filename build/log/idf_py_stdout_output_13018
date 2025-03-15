@@ -1,0 +1,105 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15620
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.4 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 14 2025 21:31:53[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a92ch ( 43308) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001a954 vaddr=3ffb0000 size=02334h (  9012) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001cc90 vaddr=40080000 size=03388h ( 13192) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=17830h ( 96304) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00037858 vaddr=40083388 size=0991ch ( 39196) load[0m
+[0;32mI (188) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (200) cpu_start: Multicore app[0m
+[0;32mI (209) cpu_start: Pro cpu start user code[0m
+[0;32mI (209) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (209) cpu_start: Application information:[0m
+[0;32mI (212) cpu_start: Project name:     testedilithium[0m
+[0;32mI (218) cpu_start: App version:      1[0m
+[0;32mI (222) cpu_start: Compile time:     Mar 14 2025 21:31:44[0m
+[0;32mI (228) cpu_start: ELF file SHA256:  de7a56acb...[0m
+[0;32mI (234) cpu_start: ESP-IDF:          v5.2.4[0m
+[0;32mI (238) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (243) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (248) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (253) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (260) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (266) heap_init: At 3FFB2CC0 len 0002D340 (180 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (279) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 4008CCA4 len 0001335C (76 KiB): IRAM[0m
+[0;32mI (293) spi_flash: detected chip: generic[0m
+[0;32mI (296) spi_flash: flash io: dio[0m
+[0;32mI (311) pm: Frequency switching config: CPU_MAX: 160, APB_MAX: 80, APB_MIN: 40, Light sleep: DISABLED[0m
+[0;32mI (313) main_task: Started on CPU0[0m
+[0;32mI (323) main_task: Calling app_main()[0m
+[0;32mI (323) test_dilithium_perf: Dilithium Performance Test task started[0m
+[0;32mI (323) test_dilithium_perf: NTESTS = 10[0m
+[0;32mI (333) test_dilithium_perf: Performance test task created successfully[0m
+[0;32mI (333) main_task: Returned from app_main()[0m
+[0;32mI (453) test_dilithium_perf: Iteration 0:[0m
+[0;32mI (453) test_dilithium_perf:   Keypair cycles:   5597428[0m
+[0;32mI (453) test_dilithium_perf:   Sign cycles:      6480641[0m
+[0;32mI (463) test_dilithium_perf:   Open cycles:      4205948[0m
+[0;32mI (663) test_dilithium_perf: Iteration 1:[0m
+[0;32mI (663) test_dilithium_perf:   Keypair cycles:   3820484[0m
+[0;32mI (663) test_dilithium_perf:   Sign cycles:      18748018[0m
+[0;32mI (663) test_dilithium_perf:   Open cycles:      4191316[0m
+[0;32mI (913) test_dilithium_perf: Iteration 2:[0m
+[0;32mI (913) test_dilithium_perf:   Keypair cycles:   3842700[0m
+[0;32mI (913) test_dilithium_perf:   Sign cycles:      26056990[0m
+[0;32mI (913) test_dilithium_perf:   Open cycles:      4191404[0m
+[0;32mI (1173) test_dilithium_perf: Iteration 3:[0m
+[0;32mI (1173) test_dilithium_perf:   Keypair cycles:   3915531[0m
+[0;32mI (1173) test_dilithium_perf:   Sign cycles:      27457617[0m
+[0;32mI (1183) test_dilithium_perf:   Open cycles:      4191578[0m
+[0;32mI (1523) test_dilithium_perf: Iteration 4:[0m
+[0;32mI (1523) test_dilithium_perf:   Keypair cycles:   3868478[0m
+[0;32mI (1523) test_dilithium_perf:   Sign cycles:      42076238[0m
+[0;32mI (1533) test_dilithium_perf:   Open cycles:      4191705[0m
+[0;32mI (1653) test_dilithium_perf: Iteration 5:[0m
+[0;32mI (1653) test_dilithium_perf:   Keypair cycles:   3773332[0m
+[0;32mI (1653) test_dilithium_perf:   Sign cycles:      6420996[0m
+[0;32mI (1663) test_dilithium_perf:   Open cycles:      4191049[0m
+[0;32mI (1813) test_dilithium_perf: Iteration 6:[0m
+[0;32mI (1813) test_dilithium_perf:   Keypair cycles:   3844241[0m
+[0;32mI (1813) test_dilithium_perf:   Sign cycles:      11440121[0m
+[0;32mI (1823) test_dilithium_perf:   Open cycles:      4191341[0m
+[0;32mI (1983) test_dilithium_perf: Iteration 7:[0m
+[0;32mI (1983) test_dilithium_perf:   Keypair cycles:   3820587[0m
+[0;32mI (1983) test_dilithium_perf:   Sign cycles:      13729365[0m
+[0;32mI (1993) test_dilithium_perf:   Open cycles:      4193335[0m
+[0;32mI (2243) test_dilithium_perf: Iteration 8:[0m
+[0;32mI (2243) test_dilithium_perf:   Keypair cycles:   3866320[0m
+[0;32mI (2243) test_dilithium_perf:   Sign cycles:      26074910[0m
+[0;32mI (2243) test_dilithium_perf:   Open cycles:      4193043[0m
+[0;32mI (2413) test_dilithium_perf: Iteration 9:[0m
+[0;32mI (2413) test_dilithium_perf:   Keypair cycles:   3843108[0m
+[0;32mI (2413) test_dilithium_perf:   Sign cycles:      13740480[0m
+[0;32mI (2423) test_dilithium_perf:   Open cycles:      4191653[0m
+[0;32mI (2423) test_dilithium_perf: ------------------------------------[0m
+[0;32mI (2433) test_dilithium_perf: Performance Test PASS[0m
+[0;32mI (2433) test_dilithium_perf: CRYPTO_PUBLICKEYBYTES = 1312[0m
+[0;32mI (2443) test_dilithium_perf: CRYPTO_SECRETKEYBYTES = 2560[0m
+[0;32mI (2453) test_dilithium_perf: CRYPTO_BYTES = 2420[0m

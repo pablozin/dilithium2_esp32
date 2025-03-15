@@ -1,0 +1,49 @@
+[1/29] Linking C static library esp-idf/aes256ctr/libaes256ctr.a
+[2/29] Linking C static library esp-idf/fips202/libfips202.a
+[3/29] Building C object esp-idf/symmetric/CMakeFiles/__idf_symmetric.dir/symmetric-shake.c.obj
+[4/29] Building C object esp-idf/rounding/CMakeFiles/__idf_rounding.dir/rounding.c.obj
+[5/29] Building C object esp-idf/ntt/CMakeFiles/__idf_ntt.dir/ntt.c.obj
+[6/29] Building C object esp-idf/randombytes/CMakeFiles/__idf_randombytes.dir/randombytes.c.obj
+[7/29] Building C object esp-idf/polyvec/CMakeFiles/__idf_polyvec.dir/polyvec.c.obj
+[8/29] Linking C static library esp-idf/ntt/libntt.a
+[9/29] Linking C static library esp-idf/symmetric/libsymmetric.a
+[10/29] Linking C static library esp-idf/rounding/librounding.a
+[11/29] Performing build step for 'bootloader'
+[1/1] cd "/home/pablo/Área de trabalho/TESTES ESP32/testedilithium/build/bootloader/esp-idf/esptool_py" && /home/pablo/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/pablo/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/pablo/Área\ de\ trabalho/TESTES\ ESP32/testedilithium/build/bootloader/bootloader.bin
+Bootloader binary size 0x68b0 bytes. 0x750 bytes (7%) free.
+[12/29] Building C object esp-idf/packing/CMakeFiles/__idf_packing.dir/packing.c.obj
+[13/29] Linking C static library esp-idf/randombytes/librandombytes.a
+[14/29] No install step for 'bootloader'
+[15/29] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/testedilithium.c.obj
+/home/pablo/Área de trabalho/TESTES ESP32/testedilithium/main/testedilithium.c: In function 'app_main':
+/home/pablo/Área de trabalho/TESTES ESP32/testedilithium/main/testedilithium.c:112:21: warning: passing argument 1 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
+  112 |                     test_dilithium_performance_task, /* Function that implements the task. */
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                     |
+      |                     void (* (*)(void *))(void *)
+In file included from /home/pablo/esp/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from /home/pablo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/pablo/Área de trabalho/TESTES ESP32/testedilithium/main/testedilithium.c:3:
+/home/pablo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:382:67: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (* (*)(void *))(void *)'
+  382 |         extern BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                                                    ~~~~~~~~~~~~~~~^~~~~~~~~~
+[16/29] Completed 'bootloader'
+[17/29] Building C object esp-idf/poly/CMakeFiles/__idf_poly.dir/poly.c.obj
+[18/29] Building C object esp-idf/sign/CMakeFiles/__idf_sign.dir/sign.c.obj
+[19/29] Linking C static library esp-idf/poly/libpoly.a
+[20/29] Linking C static library esp-idf/polyvec/libpolyvec.a
+[21/29] Linking C static library esp-idf/wolfssl/libwolfssl.a
+[22/29] Linking C static library esp-idf/packing/libpacking.a
+[23/29] Linking C static library esp-idf/sign/libsign.a
+[24/29] Linking C static library esp-idf/main/libmain.a
+[25/29] Generating ld/sections.ld
+[26/29] Building C object CMakeFiles/testedilithium.elf.dir/project_elf_src_esp32.c.obj
+[27/29] Linking CXX executable testedilithium.elf
+[28/29] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/pablo/Área de trabalho/TESTES ESP32/testedilithium/build/testedilithium.bin
+[29/29] cd "/home/pablo/Área de trabalho/TESTES ESP32/testedilithium/build/esp-idf/esptool_py" && /home/pablo/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/pablo/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/pablo/Área\ de\ trabalho/TESTES\ ESP32/testedilithium/build/partition_table/partition-table.bin /home/pablo/Área\ de\ trabalho/TESTES\ ESP32/testedilithium/build/testedilithium.bin
+testedilithium.bin binary size 0x311a0 bytes. Smallest app partition is 0x100000 bytes. 0xcee60 bytes (81%) free.

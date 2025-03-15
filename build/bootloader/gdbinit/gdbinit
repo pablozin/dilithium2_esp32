@@ -1,0 +1,2 @@
+source /home/pablo/Área de trabalho/TESTES ESP32/testedilithium/build/bootloader/gdbinit/symbols
+source /home/pablo/Área de trabalho/TESTES ESP32/testedilithium/build/bootloader/gdbinit/connect
